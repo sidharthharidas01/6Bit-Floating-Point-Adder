@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
-
+//Working
 module adder(
-    input [0:3] a_shft,   
-    input [0:1] b_mux,
-    output [0:3] sum,
-    output carry
+    input wire [3:0] a_shft,   
+    input wire [3:0] b_mux,
+    output reg [3:0] sum,
+    output reg carry
     );
+    always @ (a_shft or b_mux)
+    begin
     
-assign s= a_shft ^ b_mux;
-assign c= a_shft & b_mux;
-
+    {carry, sum}=a_shft+b_mux;
+    end
 endmodule
-
