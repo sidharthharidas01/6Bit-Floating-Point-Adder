@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+//Working
 module lshift (c, SEL, SO); // in in out 
 input  [3:0] c;  // output of mux C
 input  [1:0] SEL;  // magnitude |e1=e2|
